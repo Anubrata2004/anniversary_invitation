@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebration Details - 2nd Anniversary</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body class="details-page">
+    <div class="page-container">
+        <header class="page-header fade-in">
+            <h1>Celebration Details</h1>
+            <p class="header-subtitle">Join us for a two-part celebration</p>
+        </header>
+        
+        <div class="events-container">
+            <!-- Part 1: Cake Cutting Ceremony -->
+            <div class="event-card fade-in" style="animation-delay: 0.2s;">
+                <div class="event-icon">🎂</div>
+                <h2 class="event-title">Part 1: Cake Cutting Ceremony</h2>
+                
+                <div class="event-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Date</span>
+                        <span class="detail-value">February 4, 2025</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Time</span>
+                        <span class="detail-value">12</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Venue</span>
+                        <span class="detail-value">Heritage Institute of technology</span>
+                    </div>
+                    <div class="detail-item venue-address">
+                        <span class="detail-value">opposite of open canteen</span>
+                    </div>
+                </div>
+                
+                <!-- Map for Cake Cutting -->
+                <div id="map-cake" class="event-map"></div>
+                
+                <button class="map-button" onclick="openInGoogleMaps(22.51724,88.41870 , 'Heritage Institute of Technology')">
+                    Open in Google Maps
+                </button>
+            </div>
+            
+            <!-- Part 2: Lunch Celebration -->
+            <div class="event-card fade-in" style="animation-delay: 0.4s;">
+                <div class="event-icon">🍽️</div>
+                <h2 class="event-title">Part 2: Lunch Celebration</h2>
+                
+                <div class="event-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Date</span>
+                        <span class="detail-value">February 4, 2025</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Time</span>
+                        <span class="detail-value">12:30 </span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Venue</span>
+                        <span class="detail-value">Domino's</span>
+                    </div>
+                    <div class="detail-item venue-address">
+                        <span class="detail-value">opposite of Acropolis Mall</span>
+                    </div>
+                </div>
+                
+                <!-- Map for Lunch -->
+                <div id="map-lunch" class="event-map"></div>
+                
+                <button class="map-button" onclick="openInGoogleMaps(22.51593,88.39386 , 'Dominos')">
+                    Open in Google Maps
+                </button>
+            </div>
+        </div>
+        
+        <div class="action-section fade-in" style="animation-delay: 0.6s;">
+            <p class="action-text">Ready to let us know if you can join?</p>
+            <button class="cta-button large" onclick="window.location.href='/rsvp'">
+                Continue to RSVP
+                <span class="button-icon">→</span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="{{ url_for('static', filename='js/details.js') }}"></script>
+</body>
+</html>
