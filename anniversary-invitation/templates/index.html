@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2nd Anniversary Celebration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body class="home-page">
+    <div class="home-container">
+        <!-- Animated hearts background -->
+        <div class="hearts-background">
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+        </div>
+        
+        <!-- Main invitation card -->
+        <div class="invitation-card fade-in">
+            <div class="decorative-border"></div>
+            
+            <div class="card-content">
+                <div class="date-badge">
+                    <span class="year">2023</span>
+                    <span class="separator">—</span>
+                    <span class="year">2025</span>
+                </div>
+                
+                <h1 class="title">
+                    <span class="title-line">Two Years</span>
+                    <span class="title-line">of Love</span>
+                </h1>
+                
+                <div class="subtitle">2nd Anniversary Celebration</div>
+                
+                <div class="divider">
+                    <span>❤</span>
+                </div>
+                
+                <div class="invitation-text">
+                    <p>Together they have laughed, grown, and created beautiful memories.</p>
+                    <p>Join  as they celebrate two wonderful years of our journey together.</p>
+                </div>
+                
+                <div class="couple-names">
+                    <span class="name">Bablu and Buchu</span>
+                </div>
+                
+                <button class="cta-button" onclick="window.location.href='/details'">
+                    View Celebration Details
+                    <span class="button-icon">→</span>
+                </button>
+                
+                <div class="footer-note">
+                    We can't wait to celebrate with you
+                </div>
+            </div>
+            
+            <div class="decorative-border bottom"></div>
+        </div>
+        
+        <!-- Floating elements for animation -->
+        <div class="floating-element element-1">✦</div>
+        <div class="floating-element element-2">✧</div>
+        <div class="floating-element element-3">✦</div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+</body>
+</html>
